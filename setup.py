@@ -1,0 +1,30 @@
+from setuptools import setup, find_packages
+
+setup(
+    name="aksara_ocr",
+    version="0.1",
+    description="OCR for aksara jawa.",
+    author="Herman Sugiharto",
+    author_email="herman@jkt1.ebdesk.com",
+    packages=find_packages(exclude=["service"]),
+    install_requires=[
+        "lmdb==1.4.1",
+        "MarkupSafe==2.1.3",
+        "matplotlib==3.7.2",
+        "numpy==1.24.4",
+        "opencv-python==4.8.0.76",
+        "packaging==23.1",
+        "pandas==2.0.3",
+        "Pillow==9.5.0",
+        "poetry==1.6.1",
+        "poetry-core==1.7.0",
+        "streamlit==1.26.0",
+        "textdistance==4.5.0",
+        "toml==0.10.2",
+        "torch==2.0.1",
+        "torchvision==0.15.2",
+        "tqdm==4.66.1",
+    ],
+    extras_require={"train": ["Levenshtein", "pytorch_pretrained_bert"]},
+    python_requires=">=3.8",
+)
